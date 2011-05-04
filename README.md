@@ -4,4 +4,5 @@ A Tetris clone written in Java by the course 1inf_a, Gymnasium Olching, Germany
 
 Goals
 -----
-should be written down here, too.
+Should be written down here, too.
+Eclipse links and docs will follow soon, too.
