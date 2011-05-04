@@ -1,8 +1,8 @@
-T3tr1s
-======
+# T3tr1s
 A Tetris clone written in Java by the course 1inf_a, Gymnasium Olching, Germany
 
-Goals
------
+## Goals
 Should be written down here, too.
 Eclipse links and docs will follow soon, too.
+
+See the [Project Wiki](wiki) for some early information!
