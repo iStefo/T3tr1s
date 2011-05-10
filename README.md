@@ -8,3 +8,5 @@ Eclipse links and docs will follow soon, too.
 Changes from master branch
 
 See the [Project Wiki](T3tr1s/wiki) for some early information!
+
+Here be content!
