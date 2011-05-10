@@ -6,5 +6,3 @@ Should be written down here, too.
 Eclipse links and docs will follow soon, too.
 
 See the [Project Wiki](T3tr1s/wiki) for some early information!
-
-Change from Eclipse?
