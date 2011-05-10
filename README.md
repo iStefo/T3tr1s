@@ -5,7 +5,7 @@ A Tetris clone written in Java by the course 1inf_a, Gymnasium Olching, Germany
 Should be written down here, too.
 Eclipse links and docs will follow soon, too.
 
-Changes from master branch
+Changes from master branch, and again!
 
 See the [Project Wiki](T3tr1s/wiki) for some early information!
 
