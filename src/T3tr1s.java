@@ -8,7 +8,7 @@ public class T3tr1s extends JApplet {
 	//private static final long serialVersionUID = 0001;	// Eclipse wants that...
 
 	public void init() {
-		//WindowUtilities.setNativeLookAndFeel();
+		/*//WindowUtilities.setNativeLookAndFeel();
 		Container content = getContentPane();
 		content.setBackground(Color.white);
 		content.setLayout(new FlowLayout()); 
@@ -31,6 +31,9 @@ public class T3tr1s extends JApplet {
 		frame.pack();
 
 		//5. Show it.
-		frame.setVisible(true);
+		frame.setVisible(true);*/
+		Mainwindow window;
+		window = new Mainwindow();
+		window.getTetrisWindow();
 	}
 }
