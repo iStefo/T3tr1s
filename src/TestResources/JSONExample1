@@ -1,0 +1,47 @@
+{ 
+	'Scenes': [
+		{
+			'id': 1,
+			'title': "Main Menu",
+			'layoutType': 1,
+			'buttons': [
+				{
+					'title': "Play",
+					'action': "menu/changeMenu/2"
+				}, {
+					'title': "Help",
+					'action': "menu/changeMenu/3"
+				}, {
+					'title': "Highscores",
+					'action': "menu/changeMenu/4"
+				}, {
+					'title': "Settings",
+					'action': "menu/changeMenu/5"
+				}
+			],
+			'backButton':null,
+			'form':null
+		},
+		{
+			'id': 2,
+			'title': "Play",
+			'layoutType': 1,
+			'buttons': [
+				{
+					'title': "Normal",
+					'action': "menu/changeMenu/6"
+				}, {
+					'title': "Mode 2",
+					'action': "menu/changeMenu/7"
+				}, {
+					'title': "Mode 3",
+					'action': "menu/changeMenu/8"
+				}, {
+					'title': "Mode 4",
+					'action': "menu/changeMenu/5"
+				}
+			],
+			'backButton':"back",
+			'form':null
+		}
+]
