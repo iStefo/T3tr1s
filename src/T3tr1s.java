@@ -34,6 +34,7 @@ public class T3tr1s extends JApplet {
 		frame.setVisible(true);*/
 		Mainwindow window;
 		window = new Mainwindow();
+		// huhu, this is from my local branch!
 		window.getTetrisWindow();
 	}
 }
