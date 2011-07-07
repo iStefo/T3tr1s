@@ -24,6 +24,7 @@ public class RegistrationSuccesful {
 			jFrameRegistrationSuccesful = new JFrame();
 			jFrameRegistrationSuccesful.setSize(new Dimension(600, 700));
 			jFrameRegistrationSuccesful.setContentPane(getJContentPaneRegistrationSuccesful());
+			jFrameRegistrationSuccesful.setResizable(false);
 		}
 		return jFrameRegistrationSuccesful;
 	}

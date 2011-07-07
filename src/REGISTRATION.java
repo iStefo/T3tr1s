@@ -36,6 +36,7 @@ public class REGISTRATION {
 			jFrameRegistration.setSize(new Dimension(600, 700));
 			jFrameRegistration.setContentPane(getJContentPaneRegistration());
 			jFrameRegistration.setTitle("Registration");
+			jFrameRegistration.setResizable(false);
 		}
 		return jFrameRegistration;
 	}

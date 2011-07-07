@@ -32,6 +32,7 @@ public class Login {
 			jFrameLogin = new JFrame();
 			jFrameLogin.setSize(new Dimension(600, 700));
 			jFrameLogin.setContentPane(getJContentPaneLogin());
+			jFrameLogin.setResizable(false);
 		}
 		return jFrameLogin;
 	}
