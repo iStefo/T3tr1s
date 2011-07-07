@@ -121,7 +121,7 @@ public class GAMEMODE {
 		if (jButtonBack == null) {
 			jButtonBack = new JButton();
 			jButtonBack.setBounds(new Rectangle(372, 586, 138, 57));
-			jButtonBack.setText("Zurück");
+			jButtonBack.setText("Back");
 		}
 		return jButtonBack;
 	}

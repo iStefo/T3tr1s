@@ -62,8 +62,8 @@ public class MAINMENU {
 	private JButton getJButtonGameMode() {
 		if (jButtonGameMode == null) {
 			jButtonGameMode = new JButton();
-			jButtonGameMode.setText("Spielmodus");
-			jButtonGameMode.setBounds(new Rectangle(92, 128, 101, 26));
+			jButtonGameMode.setText("Game Modes");
+			jButtonGameMode.setBounds(new Rectangle(92, 128, 157, 26));
 		}
 		return jButtonGameMode;
 	}
@@ -77,7 +77,7 @@ public class MAINMENU {
 		if (jButtonOptions == null) {
 			jButtonOptions = new JButton();
 			jButtonOptions.setBounds(new Rectangle(329, 112, 128, 51));
-			jButtonOptions.setText("Optionen");
+			jButtonOptions.setText("Options");
 		}
 		return jButtonOptions;
 	}
@@ -90,7 +90,7 @@ public class MAINMENU {
 	private JButton getJButtonHelp() {
 		if (jButtonHelp == null) {
 			jButtonHelp = new JButton();
-			jButtonHelp.setText("Hilfe");
+			jButtonHelp.setText("Help");
 		}
 		return jButtonHelp;
 	}
