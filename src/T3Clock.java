@@ -1,6 +1,5 @@
 public class T3Clock
 {
-    private int freezeDelay;
     private T3ControllerGame controller;    
     private boolean tickPause;
     private T3TickIntervalClock tickIntervalClock;
@@ -42,7 +41,7 @@ public class T3Clock
         }
     }
     
-    public void endTick()
+    public void endGame()
     {
         tickIntervalClock.setTickInterval(0);
         tickIntervalClock = null;

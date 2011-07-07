@@ -69,14 +69,11 @@ public class T3ControllerGame
         newStone();
         clock.newGame(tickInterval);
     }
-    
-    
-    
+        
     private void newStone()
     {
         int stoneId;
         stoneId = nextStoneId;
-        int random;
         Random r = new Random();
         nextStoneId = 0;
         while (nextStoneId == 0)
@@ -88,7 +85,7 @@ public class T3ControllerGame
         setMoveBrickForNewStone(stoneId);                
         for (int i = 0; i < 4; i++)
         {
-            setBrick(moveBrickX[i], moveBrickY[i], stoneId); //bricks mit richtiger Farbe erstellen
+        	brick[moveBrickX[i]][moveBrickY[i]] = stoneId; //bricks mit richtiger Farbe erstellen
         }
         
         refresh();
@@ -194,11 +191,6 @@ public class T3ControllerGame
         }
     }
     
-    private void setBrick(int x, int y, int status)
-    {
-        brick[x][y] = status;
-    }
-    
     private boolean movePossible(int x, int y)
     {
         if ((x >= 0) && (x < 10) && (y >= 0)&&(y < 24))
@@ -227,7 +219,7 @@ public class T3ControllerGame
         
         for (int i = 0; i < 4; i++)
         {
-            setBrick(moveBrickX[i], moveBrickY[i], 0);
+            brick[moveBrickX[i]][moveBrickY[i]] = 0;
         }
         
         switch (direction)
@@ -280,7 +272,7 @@ public class T3ControllerGame
          
         for (int i = 0; i < 4; i++)
         {
-            setBrick(moveBrickX[i], moveBrickY[i], colour);
+        	brick[moveBrickX[i]][moveBrickY[i]] = colour;
         }
         
         return possible;
@@ -311,7 +303,7 @@ public class T3ControllerGame
         
         for (int i = 0; i < 4; i++)
         {
-            setBrick(moveBrickX[i], moveBrickY[i], 0);
+        	brick[moveBrickX[i]][moveBrickY[i]] = 0;
         }
         
         
@@ -326,7 +318,7 @@ public class T3ControllerGame
         
         for (int i = 0; i < 4; i++)
         {
-            setBrick(moveBrickX[i], moveBrickY[i], colour);
+        	brick[moveBrickX[i]][moveBrickY[i]] = colour;
         }
         
         refresh();
@@ -466,7 +458,7 @@ public class T3ControllerGame
     
     private void gameOver()
     {
-        clock.endTick();
+        clock.endGame();
         System.out.println("GAME OVER");
     }
     
@@ -488,8 +480,7 @@ public class T3ControllerGame
             break;
             case 4:
             setDown();
-            break;
-            
+            break;          
         }
     }
    
