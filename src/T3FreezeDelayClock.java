@@ -1,44 +1,25 @@
+import java.util.Timer;
+import java.util.TimerTask;
 
+public class T3FreezeDelayClock{
 
-public class T3FreezeDelayClock extends Thread
-{
-    private int freezeDelay;
-    private T3Clock clock;
-    
-    
-    
-    public void setClock(T3Clock newClock)
-    {
-        this.clock = newClock;
-    }
-    
-    public void setFreezeDelay(int newFreezeDelay)
-    {
-        freezeDelay = newFreezeDelay;
-    }
-    
-    public void run()
-    {
-        
-        long t0, t1;
-        t0 =  System.currentTimeMillis();
-            
-        do
-        {
-            t1 = System.currentTimeMillis();
-        }while (t1 - t0 < freezeDelay);
-        clock.freezeDelayEnd();
-        
-        
-        try
-        {
-            sleep(50);
-        }
-        catch(InterruptedException ie)
-        {
-            // ...
-        }
+private Timer timer;
+private T3Clock clock;
+public long delay;
 
-    }
-    
+	public T3FreezeDelayClock(T3Clock masterClock){
+		clock = masterClock;
+	}
+
+	public void freezeDelay(int delayTime){
+		timer = new Timer();
+		timer.schedule(new FreezeTask(), delayTime);
+	}
+	
+	class FreezeTask extends TimerTask{
+		public void run(){
+			clock.freezeDelayEnd();
+			timer.cancel();
+		}
+	}
 }
