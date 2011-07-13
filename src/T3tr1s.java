@@ -1,13 +1,16 @@
 import java.awt.*;
 import javax.swing.*;
+import model.*;
+
 
 public class T3tr1s extends JApplet {
 	  /**
 	 * 
 	 */
 	//private static final long serialVersionUID = 0001;	// Eclipse wants that...
-
+	private Model model;
 	public void init() {
+		model = new Model();
 		/*//WindowUtilities.setNativeLookAndFeel();
 		Container content = getContentPane();
 		content.setBackground(Color.white);
