@@ -23,3 +23,5 @@ public long delay;
 		}
 	}
 }
+
+// eclipse sucks
