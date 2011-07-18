@@ -13,15 +13,18 @@ public class VIEW {
 	private JFrame jFrame;
 	private JPanel jContentPane;
 	private JLabel background;
-	ImageIcon backgroundPicture = new ImageIcon("pfad");
+	ImageIcon backgroundPicture = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");
 	
+	public VIEW()
+	{
+		getJFrame(T3Scene t3Scene);
+	}
 	
 	public void displayScene(T3Scene t3Scene)
 	{
-	   getJFrame(t3Scene);
-	   getJContent(t3Scene);
-	
-	  
+		   jContentPane = null;
+		   getJContentPane(t3Scene);
+	       
 	}
 	
 	private JFrame getJFrame(T3Scene t3Scene)
@@ -30,7 +33,7 @@ public class VIEW {
 		{
 			  jFrame = new JFrame();
 			  jFrame.setDefaultCloseOperation(jFrame.DISPOSE_ON_CLOSE);
-			  jFrame.setContentPane(getJContentPane());
+			  jFrame.setContentPane(getJContentPane(T3Scene t3Scene));
 			  jFrame.setSize(new Dimension(600, 700));
 			  jFrame.setResizable(false);
 			  jFrame.setTitle(t3Scene.getTitle()); 
