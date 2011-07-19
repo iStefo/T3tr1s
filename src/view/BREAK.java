@@ -1,7 +1,9 @@
 package view;
 
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -16,16 +18,18 @@ public class BREAK {
 	private JButton jButtonContinue = null;
 	private JButton jButtonHelp = null;
 	private JButton jButtonMainMenue = null;
-
+	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
+    private JLabel backgroundLabel = null;
+    
 	/**
 	 * This method initializes jFrameBreak	
 	 * 	
 	 * @return javax.swing.JFrame	
 	 */
-	private JFrame getJFrameBreak() {
+	public JFrame getJFrameBreak() {
 		if (jFrameBreak == null) {
 			jFrameBreak = new JFrame();
-			jFrameBreak.setSize(new Dimension(600, 700));
+			jFrameBreak.setSize(new Dimension(606, 733));
 			jFrameBreak.setContentPane(getJContentPaneBreak());
 			jFrameBreak.setResizable(false);
 		}
@@ -45,6 +49,11 @@ public class BREAK {
 			jContentPaneBreak.add(getJButtonContinue(), null);
 			jContentPaneBreak.add(getJButtonHelp(), null);
 			jContentPaneBreak.add(getJButtonMainMenue(), null);
+			
+			backgroundLabel = new JLabel(backgroundII);
+			backgroundLabel.setBounds(new Rectangle(0, 0, 600, 700));
+			jContentPaneBreak.add(backgroundLabel, null);
+			backgroundLabel.setVisible(true);
 		}
 		return jContentPaneBreak;
 	}

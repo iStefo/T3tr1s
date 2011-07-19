@@ -1,6 +1,7 @@
 package view;
 
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -19,7 +20,9 @@ public class GAMEOVER {
 	private JButton jButtonHighscore = null;
 	private JButton jButtonMenu = null;
 	private JLabel jLabelGameOver = null;
-
+	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
+    private JLabel backgroundLabel = null;
+	
 	public GAMEOVER () {
 		getJFrameGameOver();
 	}
@@ -54,6 +57,11 @@ public class GAMEOVER {
 			jContentPaneGameOver.add(getJButtonHighscore(), null);
 			jContentPaneGameOver.add(getJButtonMenu(), null);
 			jContentPaneGameOver.add(jLabelGameOver, null);
+			
+			backgroundLabel = new JLabel(backgroundII);
+			backgroundLabel.setBounds(new Rectangle(0, 0, 600, 700));
+			jContentPaneGameOver.add(backgroundLabel, null);
+			backgroundLabel.setVisible(true);
 		}
 		return jContentPaneGameOver;
 	}

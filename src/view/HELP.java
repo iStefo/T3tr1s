@@ -1,6 +1,7 @@
 package view;
 
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -15,15 +16,17 @@ public class HELP {
 	private JLabel jLabelHelp = null;
 	private JTextArea jTextAreaClassic = null;
 	private JTextArea jTextAreaTimeWarp = null;
-	
+	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
+    private JLabel backgroundLabel = null;
+    
 	public void HELP() {
 		getJFrameHelp();
 	}
 	
-	private JFrame getJFrameHelp() {
+	public JFrame getJFrameHelp() {
 		if (jFrameHelp == null) {
 			jFrameHelp = new JFrame();
-			jFrameHelp.setSize(new Dimension(600, 700));
+			jFrameHelp.setSize(new Dimension(606, 733));
 			jFrameHelp.setContentPane(getJContentPaneHelp());
 		}
 		return jFrameHelp;
@@ -44,6 +47,11 @@ public class HELP {
 			jContentPaneHelp.add(jLabelHelp, null);
 			jContentPaneHelp.add(getJTextAreaClassic(), null);
 			jContentPaneHelp.add(getJTextAreaTimeWarp(), null);
+			
+			backgroundLabel = new JLabel(backgroundII);
+			backgroundLabel.setBounds(new Rectangle(0, 0, 600, 700));
+			jContentPaneHelp.add(backgroundLabel, null);
+			backgroundLabel.setVisible(true);
 		}
 		return jContentPaneHelp;
 	}

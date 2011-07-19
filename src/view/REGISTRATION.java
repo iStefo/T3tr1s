@@ -8,6 +8,8 @@ import java.awt.Dimension;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import java.awt.Rectangle;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -25,16 +27,18 @@ public class REGISTRATION {
 	private JPasswordField jPasswordFieldPassword = null;
 	private JPasswordField jPasswordFieldRepeatPassword = null;
 	private JTextField jTextFieldUsername = null;
+	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
+    private JLabel backgroundLabel = null;
 
 	/**
 	 * This method initializes jFrameRegistration	
 	 * 	
 	 * @return javax.swing.JFrame	
 	 */
-	private JFrame getJFrameRegistration() {
+	public JFrame getJFrameRegistration() {
 		if (jFrameRegistration == null) {
 			jFrameRegistration = new JFrame();
-			jFrameRegistration.setSize(new Dimension(600, 700));
+			jFrameRegistration.setSize(new Dimension(606, 733));
 			jFrameRegistration.setContentPane(getJContentPaneRegistration());
 			jFrameRegistration.setTitle("Registration");
 			jFrameRegistration.setResizable(false);
@@ -76,6 +80,11 @@ public class REGISTRATION {
 			jContentPaneRegistration.add(getJPasswordFieldPassword(), null);
 			jContentPaneRegistration.add(getJPasswordFieldRepeatPassword(), null);
 			jContentPaneRegistration.add(getJTextFieldUsername(), null);
+			
+			backgroundLabel = new JLabel(backgroundII);
+			backgroundLabel.setBounds(new Rectangle(0, 0, 600, 700));
+			jContentPaneRegistration.add(backgroundLabel, null);
+			backgroundLabel.setVisible(true);
 		}
 		return jContentPaneRegistration;
 	}

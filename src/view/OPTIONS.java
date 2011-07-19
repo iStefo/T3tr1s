@@ -1,6 +1,7 @@
 package view;
 
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -20,15 +21,17 @@ public class OPTIONS {
 	private JTextField jTextFieldGoDownFaster = null;
 	private JTextField jTextFieldPutDown = null;
 	private JTextField jTextFieldPause = null;
+	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
+    private JLabel backgroundLabel = null;
 	/**
 	 * This method initializes jFrameOptions	
 	 * 	
 	 * @return javax.swing.JFrame	
 	 */
-	private JFrame getJFrameOptions() {
+	public JFrame getJFrameOptions() {
 		if (jFrameOptions == null) {
 			jFrameOptions = new JFrame();
-			jFrameOptions.setSize(new Dimension(600, 700));
+			jFrameOptions.setSize(new Dimension(606, 733));
 			jFrameOptions.setResizable(false);
 			jFrameOptions.setTitle("Options");
 			jFrameOptions.setContentPane(getJContentPaneOptions());
@@ -55,6 +58,11 @@ public class OPTIONS {
 			jContentPaneOptions.add(getJTextFieldGoDownFaster(), null);
 			jContentPaneOptions.add(getJTextFieldPutDown(), null);
 			jContentPaneOptions.add(getJTextFieldPause(), null);
+			
+			backgroundLabel = new JLabel(backgroundII);
+			backgroundLabel.setBounds(new Rectangle(0, 0, 600, 700));
+			jContentPaneOptions.add(backgroundLabel, null);
+			backgroundLabel.setVisible(true);
 		}
 		return jContentPaneOptions;
 	}

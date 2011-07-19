@@ -1,6 +1,7 @@
 package view;
 
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -18,16 +19,17 @@ public class MAINMENU {
 	private JButton jButtonHighscores = null;  //  @jve:decl-index=0:visual-constraint="358,288"
 	private JButton jButtonLogout = null;
 	private JLabel jLabelMainMenu = null;
-
+	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
+    private JLabel backgroundLabel = null;
 	/**
 	 * This method initializes jFrameMainMenu	
 	 * 	
 	 * @return javax.swing.JFrame	
 	 */
-	private JFrame getJFrameMainMenu() {
+	public JFrame getJFrameMainMenu() {
 		if (jFrameMainMenu == null) {
 			jFrameMainMenu = new JFrame();
-			jFrameMainMenu.setSize(new Dimension(600, 700));
+			jFrameMainMenu.setSize(new Dimension(606, 733));
 			jFrameMainMenu.setResizable(false);
 			jFrameMainMenu.setTitle("Main Menu");
 			jFrameMainMenu.setContentPane(getJContentPaneMainMenu());
@@ -51,6 +53,11 @@ public class MAINMENU {
 			jContentPaneMainMenu.add(getJButtonLogout(), null);
 			jContentPaneMainMenu.add(getJButtonGameMode(), null);
 			jContentPaneMainMenu.add(jLabelMainMenu, null);
+			
+			backgroundLabel = new JLabel(backgroundII);
+			backgroundLabel.setBounds(new Rectangle(0, 0, 600, 700));
+			jContentPaneMainMenu.add(backgroundLabel, null);
+			backgroundLabel.setVisible(true);
 		}
 		return jContentPaneMainMenu;
 	}

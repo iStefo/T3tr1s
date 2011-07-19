@@ -7,6 +7,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.JLabel;
 import java.awt.Rectangle;
+
+import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -22,15 +24,18 @@ public class LOGIN {
 	private JButton jButtonLogin = null;
 	private JButton jButtonTestGame = null;
 	private JButton jButtonRegistration = null;
+	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
+    private JLabel backgroundLabel = null;
+    
 	/**
 	 * This method initializes jFrameLogin	
 	 * 	
 	 * @return javax.swing.JFrame	
 	 */
-	private JFrame getJFrameLogin() {
+	public JFrame getJFrameLogin() {
 		if (jFrameLogin == null) {
 			jFrameLogin = new JFrame();
-			jFrameLogin.setSize(new Dimension(600, 700));
+			jFrameLogin.setSize(new Dimension(606, 733));
 			jFrameLogin.setContentPane(getJContentPaneLogin());
 			jFrameLogin.setResizable(false);
 		}
@@ -63,6 +68,11 @@ public class LOGIN {
 			jContentPaneLogin.add(getJButtonLogin(), null);
 			jContentPaneLogin.add(getJButtonTestGame(), null);
 			jContentPaneLogin.add(getJButtonRegistration(), null);
+			
+			backgroundLabel = new JLabel(backgroundII);
+			backgroundLabel.setBounds(new Rectangle(0, 0, 600, 700));
+			jContentPaneLogin.add(backgroundLabel, null);
+			backgroundLabel.setVisible(true);
 		}
 		return jContentPaneLogin;
 	}

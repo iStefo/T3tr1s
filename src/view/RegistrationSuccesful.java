@@ -1,7 +1,9 @@
 package view;
 
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -14,16 +16,17 @@ public class RegistrationSuccesful {
 	private JPanel jContentPaneRegistrationSuccesful = null;
 	private JTextField jTextFieldRegistrationSuccesful = null;
 	private JButton jButtonNext = null;
-
+	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
+    private JLabel backgroundLabel = null;
 	/**
 	 * This method initializes jFrameRegistrationSuccesful	
 	 * 	
 	 * @return javax.swing.JFrame	
 	 */
-	private JFrame getJFrameRegistrationSuccesful() {
+	public JFrame getJFrameRegistrationSuccesful() {
 		if (jFrameRegistrationSuccesful == null) {
 			jFrameRegistrationSuccesful = new JFrame();
-			jFrameRegistrationSuccesful.setSize(new Dimension(600, 700));
+			jFrameRegistrationSuccesful.setSize(new Dimension(606, 733));
 			jFrameRegistrationSuccesful.setContentPane(getJContentPaneRegistrationSuccesful());
 			jFrameRegistrationSuccesful.setResizable(false);
 		}
@@ -41,6 +44,11 @@ public class RegistrationSuccesful {
 			jContentPaneRegistrationSuccesful.setLayout(null);
 			jContentPaneRegistrationSuccesful.add(getJTextFieldRegistrationSuccesful(), null);
 			jContentPaneRegistrationSuccesful.add(getJButtonNext(), null);
+			
+			backgroundLabel = new JLabel(backgroundII);
+			backgroundLabel.setBounds(new Rectangle(0, 0, 600, 700));
+			jContentPaneRegistrationSuccesful.add(backgroundLabel, null);
+			backgroundLabel.setVisible(true);
 		}
 		return jContentPaneRegistrationSuccesful;
 	}

@@ -28,7 +28,7 @@ public class GAMEMODE {
 	 * 	
 	 * @return javax.swing.JFrame	
 	 */
-	private JFrame getJFrameGameMode() {
+	public JFrame getJFrameGameMode() {
 		if (jFrameGameMode == null) {
 			jFrameGameMode = new JFrame();
 			jFrameGameMode.setSize(new Dimension(606, 733));
