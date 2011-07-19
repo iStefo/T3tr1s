@@ -13,51 +13,70 @@ public class VIEW {
 	private JFrame jFrame;
 	private JPanel jContentPane;
 	private JLabel background;
+	BREAK pause;
+	GAMEMODE gamemode;
+	GAMEOVER gameover;
+	HELP help;
+	LOGIN login;
+	MAINMENU mainmenu;
+	OPTIONS options;
+	REGISTRATION registration;
+	RegistrationSuccesful registrationSuccesful;
+	
 	ImageIcon backgroundPicture = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");
 	
 	public VIEW()
 	{
-		getJFrame(T3Scene t3Scene);
+		
 	}
 	
-	public void displayScene(T3Scene t3Scene)
+	public void displayScene(int id)
 	{
-		   jContentPane = null;
-		   getJContentPane(t3Scene);
+		   switch(id)
+		   {
+		   case 0: //Login
+			   
+		   break;
+		   
+		   case 1: //Mainmenu
+			   break;
+			   
+		   case 2: //Logout
+			   break;
+			   
+		   case 3: //Registration
+			   break;
+			   
+		   case 4: //RegistrationSuccesfull
+			   break;
+			   
+		   case 5: //Pause
+			   break;
+			   
+		   case 6: //Options
+			   break;
+			   
+		   case 7: //Help
+			   break;
+			   
+		   case 8: //Gamemode
+			   break;
+			   
+		   case 9: //Gameover
+			   break;
+			   
+		   case 10: //Gamescreen
+			   break;
+		   }
 	       
 	}
 	
-	private JFrame getJFrame(T3Scene t3Scene)
-	{
-		if (jFrame==null)
-		{
-			  jFrame = new JFrame();
-			  jFrame.setDefaultCloseOperation(jFrame.DISPOSE_ON_CLOSE);
-			  jFrame.setContentPane(getJContentPane(T3Scene t3Scene));
-			  jFrame.setSize(new Dimension(600, 700));
-			  jFrame.setResizable(false);
-			  jFrame.setTitle(t3Scene.getTitle()); 
-		}return  jFrame;
-	}
-
 	
-	
-	
-	private JPanel getJContentPane(T3Scene t3Scene) {
-		if(jContentPane==null)
-		{
-			jContentPane = new JPanel();
-			jContentPane.setLayout(null);
-			background = new JLabel(backgroundPicture);
-			background.setBounds(0, 0, 600, 700);
-		}
-		return jContentPane;
-	}
-
 	
 	
 	public String getValueForElement(String title)
 	{
 		
 	}
+	 
 }

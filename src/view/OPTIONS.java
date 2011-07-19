@@ -30,6 +30,7 @@ public class OPTIONS {
 			jFrameOptions = new JFrame();
 			jFrameOptions.setSize(new Dimension(600, 700));
 			jFrameOptions.setResizable(false);
+			jFrameOptions.setTitle("Options");
 			jFrameOptions.setContentPane(getJContentPaneOptions());
 		}
 		return jFrameOptions;

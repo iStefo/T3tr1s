@@ -15,6 +15,7 @@ public class HELP {
 	private JLabel jLabelHelp = null;
 	private JTextArea jTextAreaClassic = null;
 	private JTextArea jTextAreaTimeWarp = null;
+	
 	public void HELP() {
 		getJFrameHelp();
 	}

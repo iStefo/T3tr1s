@@ -8,6 +8,8 @@ import java.awt.Dimension;
 import javax.swing.JLabel;
 import java.awt.Rectangle;
 import javax.swing.JButton;
+import javax.swing.ImageIcon;
+
 public class GAMEMODE {
 
 	private JFrame jFrameGameMode = null;  //  @jve:decl-index=0:visual-constraint="109,16"
@@ -18,7 +20,9 @@ public class GAMEMODE {
 	private JButton jButtonTimeWarp = null;
 	private JButton jButtonHelp = null;
 	private JButton jButtonBack = null;
-
+	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
+    private JLabel backgroundLabel = null;
+    
 	/**
 	 * This method initializes jFrameGameMode	
 	 * 	
@@ -27,7 +31,7 @@ public class GAMEMODE {
 	private JFrame getJFrameGameMode() {
 		if (jFrameGameMode == null) {
 			jFrameGameMode = new JFrame();
-			jFrameGameMode.setSize(new Dimension(600, 700));
+			jFrameGameMode.setSize(new Dimension(606, 733));
 			jFrameGameMode.setResizable(false);
 			jFrameGameMode.setTitle("Game Modes");
 			jFrameGameMode.setContentPane(getJContentPaneGameMode());
@@ -53,6 +57,11 @@ public class GAMEMODE {
 			jContentPaneGameMode.add(getJButtonTimeWarp(), null);
 			jContentPaneGameMode.add(getJButtonHelp(), null);
 			jContentPaneGameMode.add(getJButtonBack(), null);
+			
+			backgroundLabel = new JLabel(backgroundII);
+			backgroundLabel.setBounds(new Rectangle(0, 0, 600, 700));
+			jContentPaneGameMode.add(backgroundLabel, null);
+			backgroundLabel.setVisible(true);
 		}
 		return jContentPaneGameMode;
 	}

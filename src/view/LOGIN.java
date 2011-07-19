@@ -10,14 +10,13 @@ import java.awt.Rectangle;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
-public class Login {
+public class LOGIN {
 
 	private JFrame jFrameLogin = null;  //  @jve:decl-index=0:visual-constraint="39,30"
 	private JPanel jContentPaneLogin = null;
 	private JLabel jLabel = null;  //  @jve:decl-index=0:visual-constraint="246,22"
 	private JLabel jLabelLogin = null;
 	private JTextField jTextFieldUsername = null;
-	private JLabel jLabelUsername = null;
 	private JLabel jLabelPassword = null;
 	private JPasswordField jPasswordFieldPassword = null;
 	private JButton jButtonLogin = null;
