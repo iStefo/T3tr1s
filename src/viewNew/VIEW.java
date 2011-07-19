@@ -1,4 +1,4 @@
-package view;
+package viewNew;
 import java.awt.Container;
 import java.awt.Dimension;
 
@@ -25,11 +25,6 @@ public class VIEW {
 	
 	
 	
-	public VIEW()
-	{
-		
-	}
-	
 	public void displayScene(int id)
 	{
 		   switch(id)
@@ -42,9 +37,9 @@ public class VIEW {
 			   mainmenu.getJFrameMainMenu();
 			   break;
 			   
-		   case 2: //Logout
-			   
-			   break;
+		   //case 2: //Logout
+			 //  logout.getJFrameLogout();
+			   //break;
 			   
 		   case 3: //Registration
 			   registration.getJFrameRegistration();
@@ -66,9 +61,9 @@ public class VIEW {
 			   help.getJFrameHelp();
 			   break;
 			   
-		   case 8: //Gamemode
-			   gamemode.getJFrameGameMode();
-			   break;
+		   //case 8: //Gamemode
+			 //  gamemode.getJFrameGameMode();
+			   //break;
 
 		   case 9: //Gameover
 			   registration.getJFrameRegistration();
@@ -83,9 +78,16 @@ public class VIEW {
 	
 	
 	
-	public String getValueForElement(String title)
+	public char[] getValueForElement(String title)
 	{
-		
+		if(title == "password")
+		{
+			return login.getPassword();
+	    }
+		else
+		{
+			return login.getUsername();
+		}
 	}
 	 
 }

@@ -1,4 +1,4 @@
-package view;
+package viewNew;
 
 
 import javax.swing.ImageIcon;

@@ -1,4 +1,4 @@
-package view;
+package viewNew;
 
 
 import javax.swing.JFrame;
@@ -16,9 +16,8 @@ public class LOGIN {
 
 	private JFrame jFrameLogin = null;  //  @jve:decl-index=0:visual-constraint="39,30"
 	private JPanel jContentPaneLogin = null;
-	private JLabel jLabel = null;  //  @jve:decl-index=0:visual-constraint="246,22"
 	private JLabel jLabelLogin = null;
-	private JTextField jTextFieldUsername = null;
+	private JPasswordField jPasswordFieldUsername = null;
 	private JLabel jLabelPassword = null;
 	private JPasswordField jPasswordFieldPassword = null;
 	private JButton jButtonLogin = null;
@@ -61,7 +60,7 @@ public class LOGIN {
 			jContentPaneLogin = new JPanel();
 			jContentPaneLogin.setLayout(null);
 			jContentPaneLogin.add(jLabelLogin, null);
-			jContentPaneLogin.add(getJTextFieldUsername(), null);
+			jContentPaneLogin.add(getJPasswordFieldUsername(), null);
 			jContentPaneLogin.add(jLabelUsername, null);
 			jContentPaneLogin.add(jLabelPassword, null);
 			jContentPaneLogin.add(getJPasswordFieldPassword(), null);
@@ -82,10 +81,10 @@ public class LOGIN {
 	 * 	
 	 * @return javax.swing.JTextField	
 	 */
-	private JTextField getJTextFieldUsername() {
-		if (jTextFieldUsername == null) {
-			jTextFieldUsername = new JTextField();
-			jTextFieldUsername.setBounds(new Rectangle(262, 94, 144, 32));
+	private JTextField getJPasswordFieldUsername() {
+		if (jPasswordFieldUsername == null) {
+			jPasswordFieldUsername = new JTextField();
+			jPasswordFieldUsername.setBounds(new Rectangle(262, 94, 144, 32));
 		}
 		return jTextFieldUsername;
 	}
@@ -145,11 +144,18 @@ public class LOGIN {
 		return jButtonRegistration;
 	}
 
-	/**
-	 * This method initializes jLabel	
-	 * 	
-	 * @return javax.swing.JLabel	
-	 */
+	public char[] getPassword()
+	{
+		
+		return jPasswordFieldPassword.getPassword();
+	}
+	
+	public char[] getUsername()
+	{
+		
+		return jPasswordFieldUsername.getPassword();
+	}
+	
 	
 
 }

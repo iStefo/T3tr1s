@@ -1,4 +1,4 @@
-package view;
+package viewNew;
 
 
 import javax.swing.JFrame;
@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
 
 public class GAMEMODE {
 
-	private JFrame jFrameGameMode = null;  //  @jve:decl-index=0:visual-constraint="109,16"
+	private JFrame jFrameGameMode = null;  //  @jve:decl-index=0:visual-constraint="100,19"
 	private JPanel jContentPaneGameMode = null;
 	private JLabel jLabelGameMode = null;
 	private JButton jButtonArcade = null;
@@ -23,12 +23,14 @@ public class GAMEMODE {
 	ImageIcon backgroundII = new ImageIcon("J:\\T3tr1s\\Pictures\\HintergrundTetris.png");  //  @jve:decl-index=0:
     private JLabel backgroundLabel = null;
     
-	/**
+	
+    
+    /**
 	 * This method initializes jFrameGameMode	
 	 * 	
 	 * @return javax.swing.JFrame	
 	 */
-	public JFrame getJFrameGameMode() {
+	private JFrame getJFrameGameMode() {
 		if (jFrameGameMode == null) {
 			jFrameGameMode = new JFrame();
 			jFrameGameMode.setSize(new Dimension(606, 733));
